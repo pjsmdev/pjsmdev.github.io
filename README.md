@@ -1,74 +1,75 @@
-# Personal Portfolio
+# React + TypeScript + Vite
 
-Personal portfolio showcasing my journey from Full Stack Web Development into Cybersecurity, with a focus on Security Operations (SOC).
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## About
+Currently, two official plugins are available:
 
-I have a background in software development and completed the **RE_Start – Developer** bootcamp at **PRIMAVERA Business Software Solutions** in December 2024.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-The 330-hour training program covered:
+## React Compiler
 
-- **Database Development:** Microsoft SQL Server and NoSQL.
-- **Object-Oriented Programming:** C# and .NET.
-- **Web Development:** HTML5, CSS3, JavaScript and Angular.
-- **Agile Methodologies:** Agile principles and practices.
-- **UX Essentials:** User experience fundamentals.
-- **Practical Experience:** Three development projects.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-I am currently transitioning into Cybersecurity and developing my skills in:
+## Expanding the ESLint configuration
 
-- Security Operations (SOC)
-- Networking
-- Linux
-- Python
-- Threat Detection and Analysis
-- Incident Response
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## Technologies
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-- **Frontend:** React, Angular, HTML5 and CSS3.
-- **Backend:** C# and .NET.
-- **Programming Languages:** Python, C#, JavaScript and TypeScript.
-- **Databases:** Microsoft SQL Server, PostgreSQL, MySQL, MariaDB and NoSQL.
-- **Tools & Platforms:** Vite, Git and GitHub.
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-## Cybersecurity Tools & Platforms
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-- TryHackMe
-- Hack The Box
-- CyberDefenders
-- Wireshark
-- Nmap
-- Wazuh
+```
 
-## Projects
+You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
-This portfolio showcases hands-on cybersecurity projects, technical investigations, CTF writeups and continuous professional development.
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-Planned project areas include:
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-- Security Operations and Log Analysis
-- Threat Detection and Monitoring
-- Network Traffic Analysis
-- Incident Investigation
-- Python Security Tools
-
-## Certifications & Training
-
-- **RE_Start – Developer** | PRIMAVERA Business Software Solutions (2024)
-- **TryHackMe – SOC Level 1** | In Progress
-- **Google Cybersecurity Professional Certificate** | Planned
-
-## Live Website
-
-[https://pjsmdev.github.io](https://pjsmdev.github.io)
-
-## Contact
-
-- **GitHub:** [github.com/pjsmdev](https://github.com/pjsmdev)
-- **LinkedIn:** [Your LinkedIn Profile]
-- **Email:** [pjsm.dec@protonmail.com]
-
-## License
-
-This project is licensed under the MIT License.
+```
