@@ -1,4 +1,4 @@
-#root {
+\#root {
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -77,6 +77,18 @@
 
 .main-content p {
   color: #94a3b8;
+}
+
+.site-footer {
+  padding: 1.5rem 5%;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
 }
 
 @media (max-width: 900px) {
