@@ -54,34 +54,32 @@
 
 /* Social Links */
 .about-social-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .about-social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+  width: 100%;
   height: 44px;
-  color: #94a3b8;
-  background: #111c30;
-  border: 1px solid rgba(148, 163, 184, 0.12);
+  color: #0b1120;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
   border-radius: 8px;
   text-decoration: none;
   transition:
-    color 0.2s ease,
     background-color 0.2s ease,
     border-color 0.2s ease,
     transform 0.2s ease;
 }
 
 .about-social-links a:hover {
-  color: #60a5fa;
-  background: #172943;
-  border-color: rgba(96, 165, 250, 0.4);
+  background: #cbd5e1;
+  border-color: #60a5fa;
   transform: translateY(-2px);
 }
 
@@ -93,8 +91,8 @@
 /* Local SVG Social Icons */
 .about-social-icon {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
 }
 
@@ -218,12 +216,8 @@
     max-width: 320px;
   }
 
-  .about-photo {
-    aspect-ratio: 4 / 5;
-  }
-
   .about-social-links {
-    justify-content: center;
+    gap: 0.5rem;
   }
 
   .about-content {

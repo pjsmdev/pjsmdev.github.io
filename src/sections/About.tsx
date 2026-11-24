@@ -22,7 +22,7 @@ const socialLinks = [
   },
   {
     name: 'Hack The Box',
-    icon: '/images/icons/hack-the-box.svg',
+    icon: '/images/icons/hack-the-box-mono.svg',
     url: '#', // TODO: Add Hack The Box profile URL
   },
 ]
