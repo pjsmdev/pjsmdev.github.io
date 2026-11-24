@@ -1,6 +1,7 @@
 import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
 import Hero from './sections/Hero'
+import About from './sections/About'
+import Footer from './components/layout/Footer'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
       <main>
         <Hero />
+        <About />
       </main>
 
       <Footer />

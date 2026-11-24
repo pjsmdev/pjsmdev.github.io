@@ -1,0 +1,248 @@
+/* About Section */
+.about-section {
+  width: 100%;
+  padding: 100px 5%;
+  background: #0b1120;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Profile Sidebar */
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-profile {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111c30;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.about-location svg {
+  color: #60a5fa;
+  flex-shrink: 0;
+}
+
+/* Social Links */
+.about-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.about-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #94a3b8;
+  background: #111c30;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-social-links a:hover {
+  color: #60a5fa;
+  background: #172943;
+  border-color: rgba(96, 165, 250, 0.4);
+  transform: translateY(-2px);
+}
+
+.about-social-links a:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+/* Local SVG Social Icons */
+.about-social-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Main Content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-introduction {
+  max-width: 850px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: #60a5fa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-introduction h2 {
+  margin-bottom: 1.5rem;
+  color: #f1f5f9;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.about-introduction p {
+  margin-bottom: 1rem;
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.about-introduction p:last-child {
+  margin-bottom: 0;
+}
+
+/* Background and Interests */
+.about-background,
+.about-interests {
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.about-background h3,
+.about-interests h3 {
+  margin-bottom: 1.25rem;
+  color: #f1f5f9;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.about-background ul,
+.about-interests ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-background li,
+.about-interests li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.about-background li::before,
+.about-interests li::before {
+  position: absolute;
+  top: 0.65rem;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: #60a5fa;
+  border-radius: 50%;
+  content: '';
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .about-container {
+    grid-template-columns: 240px 1fr;
+    gap: 3rem;
+  }
+
+  .about-background ul,
+  .about-interests ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 75px 6%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-sidebar {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-profile {
+    max-width: 320px;
+  }
+
+  .about-photo {
+    aspect-ratio: 4 / 5;
+  }
+
+  .about-social-links {
+    justify-content: center;
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 60px 5%;
+  }
+
+  .about-introduction p {
+    font-size: 0.95rem;
+  }
+
+  .about-background li,
+  .about-interests li {
+    font-size: 0.9rem;
+  }
+}
