@@ -183,26 +183,6 @@
   line-height: 1.5;
 }
 
-/* Scroll indicator */
-
-.hero-scroll {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #64748b;
-  font-size: 0.8rem;
-  text-decoration: none;
-  transform: translateX(-50%);
-  transition: color 0.2s ease;
-}
-
-.hero-scroll:hover {
-  color: #60a5fa;
-}
-
 /* Responsive layout */
 
 @media (max-width: 1000px) {

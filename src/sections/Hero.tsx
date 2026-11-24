@@ -6,7 +6,6 @@ import {
   Search,
   ShieldCheck,
   ArrowRight,
-  ChevronDown,
 } from 'lucide-react'
 
 const focusAreas = [
@@ -91,10 +90,6 @@ const Hero = () => {
         </div>
       </div>
 
-      <a href="#about" className="hero-scroll" aria-label="Scroll to About">
-        <ChevronDown size={20} />
-        <span>Scroll to discover</span>
-      </a>
     </section>
   )
 }
