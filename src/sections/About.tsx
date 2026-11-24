@@ -1,19 +1,13 @@
-import { Mail, MapPin } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 import '../styles/About.css'
 
-// Social and professional profile links
-// Replace the placeholder URLs with your actual profile links.
+// Technical and professional profiles
 const socialLinks = [
   {
     name: 'GitHub',
     icon: '/images/icons/square-github-brands-solid-full.svg',
     url: 'https://github.com/pjsmdev',
-  },
-  {
-    name: 'LinkedIn',
-    icon: '/images/icons/linkedin-brands-solid-full.svg',
-    url: '#', // TODO: Add LinkedIn profile URL
   },
   {
     name: 'TryHackMe',
@@ -48,7 +42,7 @@ const About = () => {
     <section id="about" className="about-section">
       <div className="about-container">
 
-        {/* Left column: Profile photo, location and contact links */}
+        {/* Left column: Profile photo, location and technical profiles */}
         <aside className="about-sidebar">
           <div className="about-profile">
             <img
@@ -63,7 +57,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Social and professional profile links */}
+          {/* Technical and professional profile links */}
           <div className="about-social-links">
             {socialLinks.map((link) => (
               <a
@@ -82,15 +76,6 @@ const About = () => {
                 />
               </a>
             ))}
-
-            {/* Email contact: opens the visitor's default email application */}
-            <a
-              href="mailto:pjsm.dev@protonmail.com"
-              aria-label="Send me an email"
-              title="Email"
-            >
-              <Mail size={20} strokeWidth={1.8} />
-            </a>
           </div>
         </aside>
 
