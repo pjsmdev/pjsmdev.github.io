@@ -3,9 +3,9 @@ import { ShieldCheck, Download } from 'lucide-react'
 const Header = () => {
   return (
     <header className="site-header">
-      <a href="/" className="header-brand" aria-label="Paulo Melo - Home">
+      <a href="/" className="header-brand" aria-label="pjsm.dev - Home">
         <ShieldCheck size={28} strokeWidth={1.8} />
-        <span>Paulo Melo</span>
+        <span>pjsm.dev</span>
       </a>
 
       <nav className="header-navigation" aria-label="Main navigation">
