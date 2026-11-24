@@ -1,0 +1,263 @@
+/* Hero section */
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 680px;
+  padding: 5rem 8%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 80% 45%,
+      rgba(59, 130, 246, 0.12),
+      transparent 55%
+    ),
+    linear-gradient(135deg, #0a0f1c 0%, #111827 100%);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Introduction */
+
+.hero-introduction {
+  max-width: 620px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #60a5fa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.hero-introduction h1 {
+  margin: 0 0 1rem;
+  color: #f1f5f9;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-introduction h2 {
+  margin: 0 0 1.5rem;
+  color: #cbd5e1;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.hero-introduction > p {
+  max-width: 540px;
+  margin-bottom: 2rem;
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Buttons */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 48px;
+  padding: 0.8rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-button-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.hero-button-primary:hover {
+  background-color: #2563eb;
+}
+
+.hero-button-secondary {
+  border-color: #475569;
+  color: #cbd5e1;
+}
+
+.hero-button-secondary:hover {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+/* SOC Focus Areas panel */
+
+.hero-focus-panel {
+  padding: 2rem;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  background-color: rgba(30, 41, 59, 0.75);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.hero-focus-panel h3 {
+  margin: 0 0 1.5rem;
+  color: #f1f5f9;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.focus-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.focus-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.focus-item:first-child {
+  padding-top: 0;
+}
+
+.focus-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.focus-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+}
+
+.focus-details h4 {
+  margin: 0 0 0.35rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.focus-details p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Scroll indicator */
+
+.hero-scroll {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transform: translateX(-50%);
+  transition: color 0.2s ease;
+}
+
+.hero-scroll:hover {
+  color: #60a5fa;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1000px) {
+  .hero {
+    padding: 4rem 6%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 5rem 6% 6rem;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-introduction {
+    max-width: 100%;
+  }
+
+  .hero-focus-panel {
+    padding: 1.5rem;
+  }
+
+  .hero-scroll {
+    bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 5% 5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .hero-focus-panel {
+    padding: 1.25rem;
+  }
+
+  .focus-item {
+    gap: 0.75rem;
+  }
+}
