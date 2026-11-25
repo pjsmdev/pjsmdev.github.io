@@ -7,6 +7,7 @@ import './App.css'
 import Projects from './sections/Projects'
 import Writeups from './sections/Writeups'
 import Contact from './sections/Contact'
+import BackToTop from './components/ui/BackToTop'
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <BackToTop />
     </>
   )
 }
