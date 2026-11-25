@@ -1,0 +1,133 @@
+/* Technical Skills Section */
+.tech-skills-section {
+  width: 100%;
+  padding: 100px 5%;
+  background: #111827;
+}
+
+.tech-skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.tech-skills-header {
+  margin-bottom: 50px;
+}
+
+.tech-skills-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-top: 12px;
+}
+
+/* Skills Grid */
+.tech-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Skill Cards */
+.tech-skill-card {
+  padding: 30px;
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.tech-skill-card:hover {
+  border-color: #3b82f6;
+}
+
+/* Card Headers & Icons */
+.tech-skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.tech-skill-icon {
+  flex-shrink: 0;
+  color: #60a5fa;
+}
+
+.tech-skill-card-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+/* Skill Badges */
+.tech-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-skill-badge {
+  padding: 9px 15px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.tech-skill-badge:hover {
+  background: #1e3a5f;
+  border-color: #3b82f6;
+  color: #93c5fd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tech-skills-section {
+    padding: 80px 5%;
+  }
+
+  .tech-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tech-skills-header h2 {
+    font-size: 2rem;
+  }
+
+  .tech-skill-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-skills-section {
+    padding: 65px 5%;
+  }
+
+  .tech-skills-header {
+    margin-bottom: 35px;
+  }
+
+  .tech-skill-card {
+    padding: 22px;
+  }
+
+  .tech-skill-list {
+    gap: 10px;
+  }
+
+  .tech-skill-badge {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
