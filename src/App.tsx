@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer'
 import './App.css'
 import Projects from './sections/Projects'
 import Writeups from './sections/Writeups'
+import Contact from './sections/Contact'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <TechSkills />
         <Projects />
         <Writeups />
+        <Contact />
       </main>
 
       <Footer />
