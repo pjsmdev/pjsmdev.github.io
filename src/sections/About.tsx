@@ -19,6 +19,11 @@ const socialLinks = [
     icon: '/images/icons/hack-the-box-mono.svg',
     url: '#', // TODO: Add Hack The Box profile URL
   },
+    {
+    name: 'Medium',
+    icon: '/images/icons/Artboard 1.svg',
+    url: '#', // TODO: Add Medium profile URL
+  }
 ]
 
 // Professional experience
