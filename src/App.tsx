@@ -5,6 +5,7 @@ import TechSkills from './sections/TechSkills'
 import Footer from './components/layout/Footer'
 import './App.css'
 import Projects from './sections/Projects'
+import Writeups from './sections/Writeups'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <About />
         <TechSkills />
         <Projects />
+        <Writeups />
       </main>
 
       <Footer />
